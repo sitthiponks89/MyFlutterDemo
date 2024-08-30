@@ -102,6 +102,10 @@ class MyWidget extends StatelessWidget {
     return MaterialApp(
       title: "My App",
       theme: ThemeData(primarySwatch: Colors.blue), // Apply theme
+      // theme: ThemeData(
+      //   colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+      //   useMaterial3: true,
+      // ),
       home: const InitState(),
     );
   }
@@ -351,6 +355,7 @@ class _InitStateState extends State<InitState> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: const Text(
           "แปลงเปลี่ยนสกุลเงิน",
           style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
